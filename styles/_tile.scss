@@ -1,0 +1,11 @@
+.card-body {
+  border-left: 2px solid $primary-color;
+  border-bottom: 2px solid $primary-color;
+  border-bottom-left-radius: 0.25em;
+  border-bottom-right-radius: 0.25em;
+  margin-top: 10px;
+  min-height: 190px;
+  @media screen and (max-width: 992px) {
+    min-height: initial;
+  }
+}

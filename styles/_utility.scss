@@ -1,0 +1,59 @@
+.heading {
+  &--primary {
+    font-family: $primary-heading-font;
+  }
+  &--secondary {
+    font-family: $secondary-heading-font;
+  }
+}
+
+.text {
+  &--primary {
+    color: $primary-color;
+  }
+  &--secondary {
+    color: $secondary-color;
+  }
+}
+
+.primary-button {
+  border-radius: 40px;
+  border: none;
+  padding: 10px 30px;
+  transition: 0.4s ease all;
+  background-color: $primary-color;
+  color: #fff;
+  display: inline-block;
+  &:active,
+  &:hover {
+    color: #fff;
+  }
+  .animated-caret {
+    transition: 0.4s ease all;
+  }
+  &:hover {
+    box-shadow: $primary-box-shadow;
+    background-color: $secondary-color;
+    .animated-caret {
+      animation-name: "fade";
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      padding-left: 5px;
+    }
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

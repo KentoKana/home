@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700&family=Song+Myung&display=swap");
+@import "../node_modules/bootstrap";
+@import "./variables";
+@import "./utility";
+@import "./header";
+@import "./tile";
+@import "./home";
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  line-height: 1.8;
+}
