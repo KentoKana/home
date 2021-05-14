@@ -4,7 +4,6 @@ import { BaseSection } from "./BaseSection";
 import { Heading } from "./Heading";
 import Link from "next/link";
 import { IBlogPostProps } from "../pages";
-import { Tile } from "./Tile";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStackOverflow } from "@fortawesome/free-brands-svg-icons";
 
@@ -28,22 +27,29 @@ export const Blog = ({ blogPosts }: IBlogProps) => {
       </div>
       <Container className="blog__container">
         <Row>
-          {blogPosts.map((post, index) => {
+          {blogPosts.map((post) => {
             return (
               <Col lg={12} className="mb-4" key={post.id}>
                 <div className="blog__blog-item">
                   <div className="blog__blog-category-icon d-flex justify-content-center align-items-center">
                     <FontAwesomeIcon icon={faStackOverflow} />
                   </div>
-                  <a href={"/blog/" + post.slug} key={post.id}>
-                    <Tile
-                      key={index}
-                      img={post.featuredImage[0].link}
-                      title={post.title}
-                      imgAlt={post.featuredImage[0].alt_text}
-                      bodyText={post.excerpt.stripHTMLTag()}
-                    />
-                  </a>
+                  <Link href={"/blog/" + post.slug}>
+                    <a>
+                      <h3 className="mb-3">{post.title}</h3>
+                      <div className="mb-5">
+                        <span className="text-muted">{post.date}</span>
+                      </div>
+                      <div className="blog__blog-item-image-container mb-5 d-flex justify-content-center align-items-center">
+                        <img
+                          className="blog__blog-item-image"
+                          src={post.featuredImage[0].link}
+                          alt={post.featuredImage[0].alt_text}
+                        />
+                      </div>
+                      <p>{post.excerpt.stripHTMLTag()}</p>
+                    </a>
+                  </Link>
                 </div>
               </Col>
             );

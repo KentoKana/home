@@ -6,7 +6,6 @@
     min-height: calc(90vh - 60px);
     // height: calc(100vh - 60px);
     @media screen and (max-width: 992px) {
-      height: 100vh;
       min-height: 100vh;
       text-align: center;
     }
@@ -49,6 +48,17 @@
       border-left: 2px solid $secondary-color;
       position: relative;
       padding: 20px 70px;
+      &-image {
+        &-container {
+          height: 300px;
+          width: 100%;
+          overflow: hidden;
+          border-radius: 10px;
+        }
+        object-fit: cover;
+        object-position: center;
+        height: 100%;
+      }
     }
     &__blog-category-icon {
       font-size: 2em;

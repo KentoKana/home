@@ -12,6 +12,7 @@ export interface IBlogPostProps {
   featuredImage: { link: string; alt_text: string }[];
   categories: number[];
   excerpt?: string;
+  date?: string;
 }
 
 interface IHomeProps {
@@ -55,6 +56,7 @@ export const getStaticProps: GetStaticProps = async () => {
           featuredImage: post._embedded["wp:featuredmedia"],
           categories: post.categories,
           excerpt: post.excerpt.rendered,
+          date: post.date,
         };
       }),
     },
