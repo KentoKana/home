@@ -11,6 +11,7 @@ export interface IBlogPostProps {
   title: string;
   featuredImage: { link: string; alt_text: string }[];
   categories: number[];
+  excerpt?: string;
 }
 
 interface IHomeProps {
@@ -27,8 +28,8 @@ export default function Home({ blogPosts }: IHomeProps) {
       </Head>
       <main className="home">
         <Hero />
-        <Philosophy />
         <Blog blogPosts={blogPosts} />
+        <Philosophy />
       </main>
     </div>
   );
@@ -50,9 +51,10 @@ export const getStaticProps: GetStaticProps = async () => {
         return {
           id: post.id,
           slug: post.slug,
-          title: post.title,
+          title: post.title.rendered,
           featuredImage: post._embedded["wp:featuredmedia"],
           categories: post.categories,
+          excerpt: post.excerpt.rendered,
         };
       }),
     },

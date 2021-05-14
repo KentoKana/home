@@ -4,6 +4,7 @@ import "../styles/globals.scss";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 // Prevent fontawesome from adding its CSS since we did it manually above:
 import { config } from "@fortawesome/fontawesome-svg-core";
+import "../utils";
 config.autoAddCss = false; /* eslint-disable import/first */
 
 // You should do that in a Layout file or in `gatsby-browser.js`.
