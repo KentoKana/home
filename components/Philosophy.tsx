@@ -29,16 +29,19 @@ export const Philosophy = () => {
     },
   ];
   return (
-    <BaseSection sectionClassName="philosophy d-flex align-items-center">
-      <Container className="philosophy__container">
-        <Row>
+    <BaseSection sectionClassName="philosophy">
+      <div className="blog__section-header">
+        <Container>
           <Heading
             headingLabel="Philosophy"
             headingType="primary"
             color="primary"
             size="lg"
+            className="mb-5 text-white py-5"
           />
-        </Row>
+        </Container>
+      </div>
+      <Container className="philosophy__container">
         <Row>
           {tiles.map((tile) => {
             return (
