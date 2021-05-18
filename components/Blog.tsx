@@ -30,6 +30,8 @@ export const Blog = ({ blogPosts }: IBlogProps) => {
       <Container className="blog__container">
         <Row>
           {blogPosts.map((post) => {
+            const postLink = "/blog/" + post.slug + "/" + post.id;
+
             return (
               <Col lg={12} className="mb-4" key={post.id}>
                 <div className="blog__blog-item">
@@ -39,7 +41,7 @@ export const Blog = ({ blogPosts }: IBlogProps) => {
 
                   <div className="blog__blog-item-title-container mb-5 py-3">
                     <h3 className="mb-3 blog__blog-item-title">
-                      <Link href={"/blog/" + post.slug}>
+                      <Link href={postLink}>
                         <a>{post.title}</a>
                       </Link>
                     </h3>
@@ -49,16 +51,20 @@ export const Blog = ({ blogPosts }: IBlogProps) => {
                       </span>
                     </div>
                   </div>
-                  <div className="blog__blog-item-image-container mb-5 d-flex justify-content-center align-items-center">
-                    <img
-                      className="blog__blog-item-image"
-                      src={post.featuredImage[0].link}
-                      alt={post.featuredImage[0].alt_text}
-                    />
-                  </div>
+                  <Link href={postLink}>
+                    <a>
+                      <div className="blog__blog-item-image-container mb-5 d-flex justify-content-center align-items-center">
+                        <img
+                          className="blog__blog-item-image"
+                          src={post.featuredImage[0].link}
+                          alt={post.featuredImage[0].alt_text}
+                        />
+                      </div>
+                    </a>
+                  </Link>
                   <p>{post.excerpt.stripHTMLTag()}</p>
                   <div className="d-flex justify-content-end">
-                    <Link href={"/blog/" + post.slug}>
+                    <Link href={postLink}>
                       <a className="primary-button">
                         Read More{" "}
                         <span className="animated-caret">
