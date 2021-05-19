@@ -26,7 +26,7 @@ export const Heading = ({
             ? "3em"
             : "1em",
       }}
-      className={`mb-4 ${className ?? ""} ${
+      className={`${className ?? ""} ${
         "heading--" + headingType
       } ${colorClassName}`}
     >

@@ -8,7 +8,5 @@ export const BaseSection = ({
   children,
   sectionClassName,
 }: IBaseSectionProps) => {
-  return (
-    <section className={`my-4 ${sectionClassName ?? ""}`}>{children}</section>
-  );
+  return <section className={`${sectionClassName ?? ""}`}>{children}</section>;
 };
