@@ -30,7 +30,7 @@ export const Blog = ({ blogPosts }: IBlogProps) => {
       <Container className="blog__container">
         <Row>
           {blogPosts.map((post) => {
-            const postLink = "/blog/" + post.slug + "/" + post.id;
+            const postLink = "./blog/" + post.slug + "/" + post.id;
 
             return (
               <Col lg={12} className="mb-4" key={post.id}>

@@ -2,6 +2,7 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { Container } from "reactstrap";
+import { useRouter } from "next/router";
 
 export const Header = (): JSX.Element => {
   return (
@@ -10,7 +11,7 @@ export const Header = (): JSX.Element => {
         <Container>
           <ul className="d-flex justify-content-between primary-menu align-items-center">
             <li>
-              <Link href="/">
+              <Link href={"/"}>
                 <a>Kento Kanazawa</a>
               </Link>
             </li>

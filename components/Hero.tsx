@@ -36,7 +36,7 @@ export const Hero = () => {
             style={{ position: "relative" }}
           >
             <img
-              src="/images/dots.png"
+              src="./images/dots.png"
               alt="dots"
               style={{
                 position: "absolute",
@@ -47,7 +47,7 @@ export const Hero = () => {
               }}
             />
             <img
-              src="/images/stripes.png"
+              src="./images/stripes.png"
               alt="dots"
               style={{
                 position: "absolute",
@@ -61,7 +61,7 @@ export const Hero = () => {
             <div className="hero__image-container d-flex justify-content-center">
               <img
                 className="hero__image"
-                src="/images/profile.jpg"
+                src="./images/profile.jpg"
                 alt="placeholder"
               />
             </div>
