@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Head from "next/head";
 import { GetStaticProps } from "next";
-import { WP_REST_API_Posts } from "wp-types";
+import { WP_REST_API_Post, WP_REST_API_Posts } from "wp-types";
 import { Container } from "reactstrap";
 import { BaseSection } from "../../components/BaseSection";
 import { Heading } from "../../components/Heading";
 import { DateDisplay } from "../../components/DateDisplay";
 import { EBlogCategories } from "../../enums/BlogCategories";
+import { useRouterScroll } from "@moxy/next-router-scroll";
 
 interface IPost {
   id: number;
@@ -23,6 +24,11 @@ interface IPostProps {
 }
 
 const Post = ({ post }: IPostProps) => {
+  const { updateScroll } = useRouterScroll();
+
+  useEffect(() => {
+    updateScroll();
+  }, []);
   return (
     <>
       <Head>
@@ -90,14 +96,12 @@ export const getStaticPaths = async () => {
 };
 export const getStaticProps: GetStaticProps = async (context) => {
   const res = await fetch(
-    "http://blog.kentokanazawa.com/wp-json/wp/v2/posts?_embed&filter[p]=0&include[]=" +
-      context.params.slug[1]
+    `http://blog.kentokanazawa.com/wp-json/wp/v2/posts/${context.params.slug[1]}?_embed`
   );
 
-  const posts: WP_REST_API_Posts = await res.json();
-  const post = posts[0];
+  const post: WP_REST_API_Post = await res.json();
 
-  if (!posts) {
+  if (!post) {
     return {
       notFound: true,
     };

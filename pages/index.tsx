@@ -4,6 +4,8 @@ import { Hero } from "../components/Hero";
 import { Philosophy } from "../components/Philosophy";
 import { Blog } from "../components/Blog";
 import type { WP_REST_API_Posts } from "wp-types";
+import { useEffect } from "react";
+import { useRouterScroll } from "@moxy/next-router-scroll";
 
 export interface IBlogPostProps {
   id: number;
@@ -20,6 +22,11 @@ interface IHomeProps {
 }
 
 export default function Home({ blogPosts }: IHomeProps) {
+  const { updateScroll } = useRouterScroll();
+
+  useEffect(() => {
+    updateScroll();
+  }, []);
   return (
     <div>
       <Head>

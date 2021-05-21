@@ -7,6 +7,8 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 import "../utils";
 config.autoAddCss = false; /* eslint-disable import/first */
 
+import { RouterScrollProvider } from "@moxy/next-router-scroll";
+
 // You should do that in a Layout file or in `gatsby-browser.js`.
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
@@ -14,9 +16,11 @@ import { Footer } from "../components/Footer";
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Header />
-      <Component {...pageProps} />
-      <Footer />
+      <RouterScrollProvider>
+        <Header />
+        <Component {...pageProps} />
+        <Footer />
+      </RouterScrollProvider>
     </>
   );
 }
