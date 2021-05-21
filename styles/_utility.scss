@@ -32,6 +32,7 @@
     transition: 0.4s ease all;
   }
   &:hover {
+    transform: translateY(-2px);
     box-shadow: $primary-box-shadow;
     background-color: $secondary-color;
     .animated-caret {

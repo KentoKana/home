@@ -6,14 +6,14 @@ import { BaseSection } from "./BaseSection";
 
 export const Hero = () => {
   return (
-    <BaseSection sectionClassName="hero d-flex align-items-center">
+    <BaseSection sectionClassName="hero d-flex align-items-center mb-4">
       <Container className="hero__container">
         <Row>
           <Col lg={4} className="align-self-center">
             <div className="hero__image-container d-flex justify-content-center d-lg-none mb-4">
               <img
                 className="hero__image"
-                src="./images/placeholder.jpg"
+                src="./images/profile.jpg"
                 alt="placeholder"
               />
             </div>
@@ -32,13 +32,36 @@ export const Hero = () => {
             </a>
           </Col>
           <Col
-            lg={8}
             className="hero__image-section align-self-center mt-4 mt-lg-0 d-lg-block d-none"
+            style={{ position: "relative" }}
           >
+            <img
+              src="/images/dots.png"
+              alt="dots"
+              style={{
+                position: "absolute",
+                top: -50,
+                right: -20,
+                width: 300,
+                zIndex: -1,
+              }}
+            />
+            <img
+              src="/images/stripes.png"
+              alt="dots"
+              style={{
+                position: "absolute",
+                bottom: -30,
+                left: 0,
+                width: 300,
+                zIndex: -1,
+                opacity: 0.9,
+              }}
+            />
             <div className="hero__image-container d-flex justify-content-center">
               <img
                 className="hero__image"
-                src="/images/placeholder.jpg"
+                src="/images/profile.jpg"
                 alt="placeholder"
               />
             </div>
