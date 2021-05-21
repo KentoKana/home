@@ -22,7 +22,15 @@ export const Tile = ({
 }: ITileProps) => {
   return (
     <Card className="border-0">
-      {img && <CardImg top width="100%" src={img} alt={imgAlt ?? ""} />}
+      {img && (
+        <CardImg
+          top
+          width="100%"
+          src={img}
+          alt={imgAlt ?? ""}
+          style={{ maxHeight: 140 }}
+        />
+      )}
       <CardBody>
         {title && (
           <CardTitle tag="h5" className="text--primary">
