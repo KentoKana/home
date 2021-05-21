@@ -17,7 +17,9 @@
 }
 
 .primary-button {
-  border-radius: 40px;
+  // border-radius: 0.25em;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 8px;
   border: none;
   padding: 10px 30px;
   transition: 0.4s ease all;
