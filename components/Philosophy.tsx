@@ -30,14 +30,14 @@ export const Philosophy = () => {
   ];
   return (
     <BaseSection sectionClassName="philosophy">
-      <div className="blog__section-header">
+      <div className="blog__section-header bg-primary">
         <Container>
           <Heading
             headingLabel="Philosophy"
             headingType="primary"
             color="primary"
             size="lg"
-            className="mb-5 text-white py-5"
+            className="mb-5 py-5 text-white"
           />
         </Container>
       </div>
