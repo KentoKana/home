@@ -1,7 +1,5 @@
-// $max-width: 800px;
 .about {
   &__header {
-    max-width: $max-width;
     &-container {
       height: 300px;
       background-color: $primary-color;
@@ -21,9 +19,6 @@
     &-container {
       overflow: hidden;
     }
-  }
-  &__container {
-    // max-width: $max-width;
   }
 
   img[class*="wp-image"] {
