@@ -4,7 +4,6 @@ module.exports = (phase, { defaultConfig }) => {
   if (phase !== PHASE_DEVELOPMENT_SERVER) {
     return {
         trailingSlash: true,
-        assetPrefix: "."    
     }
   }
   return {
