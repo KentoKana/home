@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStackOverflow } from "@fortawesome/free-brands-svg-icons";
 import { DateDisplay } from "./DateDisplay";
 import { faBookOpen } from "@fortawesome/free-solid-svg-icons";
+import { CategoryIcon } from "./CategoryIcon";
 
 interface IBlogProps {
   blogPosts: IBlogPostProps[];
@@ -30,13 +31,13 @@ export const Blog = ({ blogPosts }: IBlogProps) => {
       <Container className="blog__container">
         <Row>
           {blogPosts.map((post) => {
-            const postLink = "./blog/" + post.slug + "/" + post.id;
+            const postLink = "/blog/" + post.slug + "/" + post.id;
 
             return (
               <Col lg={12} className="mb-4" key={post.id}>
                 <div className="blog__blog-item">
                   <div className="blog__blog-category-icon d-flex justify-content-center align-items-center">
-                    <FontAwesomeIcon icon={faStackOverflow} />
+                    <CategoryIcon category={post.categories[0]} />
                   </div>
 
                   <div className="blog__blog-item-title-container mb-5 py-3">
