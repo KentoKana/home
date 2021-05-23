@@ -49,8 +49,7 @@ function About() {
                 />
                 <p>
                   After getting my bachelor's degree in Psychology, I jumped
-                  into the world of web development to pursue a career this
-                  creative currently worked at{" "}
+                  into the world of web development. I'm currently worked at{" "}
                   <a
                     href="http://lbcit.ca"
                     target="_blank"
@@ -64,7 +63,7 @@ function About() {
               </Col>
               <Col>
                 <ImageContainer
-                  src={"./images/_profile-mug.jpg"}
+                  src={"/images/_profile-mug.jpg"}
                   alt={"Kento"}
                   rounded
                 />

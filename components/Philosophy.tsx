@@ -11,21 +11,21 @@ export const Philosophy = () => {
       subTitle: "'Few word do trick' - Kevin",
       bodyText:
         "I believe in creating designs that doesn't distract the user from achieving the primary goals of the website.",
-      img: "./images/file-minus.svg",
+      img: "/images/file-minus.svg",
     },
     {
       title: "Familiarity",
       subTitle: "Uniqueness is overrated... sometimes.",
       bodyText:
         "I design websites that feel unique, but also deliver a sense of comfort to the user by using fundamental UX principles.",
-      img: "./images/lightbulb.svg",
+      img: "/images/lightbulb.svg",
     },
     {
       title: "Purposeful",
       subTitle: "Every interaction is an opportunity.",
       bodyText:
         "I create interfaces that guide the users to quickly achieve their goals of being on the website in the first place.",
-      img: "./images/target.svg",
+      img: "/images/target.svg",
     },
   ];
   return (
