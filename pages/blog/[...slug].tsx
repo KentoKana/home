@@ -23,7 +23,7 @@ interface IPostProps {
   post: IPost;
 }
 
-const Post = ({ post }: IPostProps) => {
+function Post({ post }: IPostProps) {
   const { updateScroll } = useRouterScroll();
 
   useEffect(() => {
@@ -52,7 +52,10 @@ const Post = ({ post }: IPostProps) => {
               <div className="blog-item__categories">
                 {post.categories.map((category) => {
                   return (
-                    <span className="blog-item__category">
+                    <span
+                      className="blog-item__category"
+                      key={EBlogCategories[category]}
+                    >
                       {EBlogCategories[category]}
                     </span>
                   );
@@ -74,7 +77,7 @@ const Post = ({ post }: IPostProps) => {
       </BaseSection>
     </>
   );
-};
+}
 
 export default Post;
 export const getStaticPaths = async () => {
