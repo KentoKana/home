@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { Container } from "reactstrap";
 import { useRouter } from "next/router";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 export const Header = (): JSX.Element => {
   return (
@@ -17,13 +18,24 @@ export const Header = (): JSX.Element => {
             </li>
             <li>
               <ul className="d-flex menu-items">
+                <li>
+                  <ul className="">
+                    <li className="mx-2">
+                      <Link href={"/about"}>
+                        <a>
+                          <FontAwesomeIcon icon={faUser} title={"About"} />
+                        </a>
+                      </Link>
+                    </li>
+                  </ul>
+                </li>
                 <li className="mx-2">
                   <a
                     href="https://www.linkedin.com/in/kentokana/ "
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <FontAwesomeIcon icon={faLinkedin} />
+                    <FontAwesomeIcon icon={faLinkedin} title={"LinkedIn"} />
                   </a>
                 </li>
                 <li className="mx-2">
@@ -32,7 +44,7 @@ export const Header = (): JSX.Element => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <FontAwesomeIcon icon={faGithub} />
+                    <FontAwesomeIcon icon={faGithub} title={"GitHub"} />
                   </a>
                 </li>
               </ul>
