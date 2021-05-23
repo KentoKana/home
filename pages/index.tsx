@@ -1,11 +1,11 @@
 import { GetStaticProps } from "next";
 import Head from "next/head";
 import { Hero } from "../components/Hero";
-import { Philosophy } from "../components/Philosophy";
 import { Blog } from "../components/Blog";
 import type { WP_REST_API_Posts } from "wp-types";
 import { useEffect } from "react";
 import { useRouterScroll } from "@moxy/next-router-scroll";
+import { Closing } from "../components/Closing";
 
 export interface IBlogPostProps {
   id: number;
@@ -37,7 +37,7 @@ export default function Home({ blogPosts }: IHomeProps) {
       <main className="home">
         <Hero />
         <Blog blogPosts={blogPosts} />
-        <Philosophy />
+        <Closing />
       </main>
     </div>
   );
