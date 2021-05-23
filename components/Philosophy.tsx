@@ -30,7 +30,7 @@ export const Philosophy = () => {
   ];
   return (
     <BaseSection sectionClassName="philosophy">
-      <div className="blog__section-header bg-primary">
+      <div className="blog__section-header bg--primary">
         <Container>
           <Heading
             headingLabel="Philosophy"
