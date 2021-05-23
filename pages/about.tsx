@@ -34,22 +34,25 @@ function About() {
             </div>
           </Container>
         </div>
-        <div className="my-5">
+        <div className="my-5 about__content">
           <Container>
             <Row>
-              <Col>
+              <Col lg={6}>
                 <Heading
                   headingLabel={
-                    "I'm a developer by profession, and a general hobbyist at heart."
+                    "Developer by profession, a general hobbyist at heart."
                   }
                   headingType="primary"
                   color="primary"
                   size="lg"
-                  className="text-dark"
+                  className="text-dark mb-5"
                 />
                 <p>
-                  After getting my bachelor's degree in Psychology, I jumped
-                  into the world of web development. I'm currently worked at{" "}
+                  Hello there! I'm Kento, and I am a web developer based in the
+                  beautiful British Columbia. After getting my bachelor's degree
+                  in Psychology, I jumped into the world of web development to
+                  pursue a career in building creative solutions for real world
+                  problems. I'm currently worked at{" "}
                   <a
                     href="http://lbcit.ca"
                     target="_blank"
@@ -60,8 +63,20 @@ function About() {
                   as a web developer, building enterprise-level tool for
                   managing employee performance metrics.
                 </p>
+                <p>
+                  My specialty lies within the fields of UI/UX designs and
+                  front-end development. I believe in a minimalist and additive
+                  approach to web designs - start with the bare minimum viable
+                  product, then add UI enhancements without distracting the
+                  audience from the core purpose.
+                </p>
+                <p>
+                  Outside of development, I enjoy losing friendship over a game
+                  of Mario Kart, cooking up a storm in his kitchen, and mucking
+                  about on my guitar.
+                </p>
               </Col>
-              <Col>
+              <Col lg={6}>
                 <ImageContainer
                   src={"/images/_profile-mug.jpg"}
                   alt={"Kento"}
