@@ -2,7 +2,6 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { Container } from "reactstrap";
-import { useRouter } from "next/router";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 export const Header = (): JSX.Element => {
@@ -12,8 +11,21 @@ export const Header = (): JSX.Element => {
         <Container>
           <ul className="d-flex justify-content-between primary-menu align-items-center">
             <li>
-              <Link href={"/"}>
-                <a>Kento Kanazawa</a>
+              <Link href={"/"} shallow>
+                <a>
+                  <img
+                    className="d-none d-lg-block"
+                    src={"/images/logo.png"}
+                    alt={"Kento Kanazawa logo"}
+                    style={{ height: 100 }}
+                  />
+                  <img
+                    className="d-lg-none d-block"
+                    src={"/images/logo_small.png"}
+                    alt={"Kento Kanazawa logo"}
+                    style={{ height: 70 }}
+                  />
+                </a>
               </Link>
             </li>
             <li>
@@ -21,9 +33,9 @@ export const Header = (): JSX.Element => {
                 <li>
                   <ul className="">
                     <li className="mx-2">
-                      <Link href={"/about"}>
+                      <Link href={"/about"} shallow>
                         <a>
-                          <FontAwesomeIcon icon={faUser} title={"About"} />
+                          <FontAwesomeIcon icon={faUser} />
                         </a>
                       </Link>
                     </li>
@@ -35,7 +47,7 @@ export const Header = (): JSX.Element => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <FontAwesomeIcon icon={faLinkedin} title={"LinkedIn"} />
+                    <FontAwesomeIcon icon={faLinkedin} />
                   </a>
                 </li>
                 <li className="mx-2">
@@ -44,7 +56,7 @@ export const Header = (): JSX.Element => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <FontAwesomeIcon icon={faGithub} title={"GitHub"} />
+                    <FontAwesomeIcon icon={faGithub} />
                   </a>
                 </li>
               </ul>

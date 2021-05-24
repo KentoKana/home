@@ -37,7 +37,7 @@ function About() {
         <div className="my-5 about__content">
           <Container>
             <Row>
-              <Col lg={6}>
+              <Col lg={5}>
                 <Heading
                   headingLabel={
                     "Developer by profession, a general hobbyist at heart."
@@ -76,7 +76,7 @@ function About() {
                   about on my guitar.
                 </p>
               </Col>
-              <Col lg={6}>
+              <Col lg={7}>
                 <ImageContainer
                   src={"/images/_profile-mug.jpg"}
                   alt={"Kento"}

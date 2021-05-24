@@ -51,6 +51,10 @@
       position: relative;
       padding: 0 70px;
       margin-bottom: 40px;
+      @media screen and (max-width: 992px) {
+        border-left: none;
+        padding: 0 10px;
+      }
       &-title {
         a {
           text-decoration: none;
@@ -82,6 +86,11 @@
       height: 60px;
       width: 60px;
       color: #fff;
+      @media screen and (max-width: 992px) {
+        border-left: none;
+        padding: 0 10px;
+        position: static;
+      }
       @include primary-bg-gradient;
       // &::after {
       //   content: "";

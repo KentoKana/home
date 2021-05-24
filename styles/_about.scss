@@ -3,6 +3,9 @@
     &-container {
       height: 300px;
       background-color: $primary-color;
+      @media screen and (max-width: 992px) {
+        height: 150px;
+      }
     }
   }
   &__date {

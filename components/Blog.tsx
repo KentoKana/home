@@ -30,29 +30,36 @@ export const Blog = ({ blogPosts }: IBlogProps) => {
       </div>
       <Container className="blog__container">
         <Row>
-          {blogPosts.map((post) => {
+          {blogPosts.map((post, index) => {
             const postLink = "/blog/" + post.slug + "/" + post.id;
 
             return (
-              <Col lg={12} className="mb-4" key={post.id}>
+              <Col lg={12} className="mb-4" key={index}>
                 <div className="blog__blog-item">
-                  <div className="blog__blog-category-icon d-flex justify-content-center align-items-center">
+                  <div className="blog__blog-category-icon d-lg-flex justify-content-center align-items-center d-none">
                     <CategoryIcon category={post.categories[0]} />
                   </div>
 
-                  <div className="blog__blog-item-title-container mb-5 py-3">
-                    <h3 className="mb-3 blog__blog-item-title">
-                      <Link href={postLink}>
-                        <a>{post.title}</a>
-                      </Link>
-                    </h3>
+                  <div className="blog__blog-item-title-container mb-5 py-3 d-flex align-items-center justify-content-between">
                     <div>
-                      <span className="text-muted">
-                        <DateDisplay date={post.date} />
-                      </span>
+                      <h3 className="mb-3 blog__blog-item-title">
+                        <Link href={postLink} shallow scroll>
+                          <a>{post.title}</a>
+                        </Link>
+                      </h3>
+                      <div>
+                        <span className="text-muted">
+                          <DateDisplay date={post.date} />
+                        </span>
+                      </div>
+                    </div>
+                    <div>
+                      <div className="blog__blog-category-icon d-flex justify-content-center align-items-center d-lg-none">
+                        <CategoryIcon category={post.categories[0]} />
+                      </div>
                     </div>
                   </div>
-                  <Link href={postLink}>
+                  <Link href={postLink} shallow scroll>
                     <a>
                       <div className="blog__blog-item-image-container mb-5 d-flex justify-content-center align-items-center">
                         <img
@@ -65,7 +72,7 @@ export const Blog = ({ blogPosts }: IBlogProps) => {
                   </Link>
                   <p>{post.excerpt.stripHTMLTag()}</p>
                   <div className="d-flex justify-content-end">
-                    <Link href={postLink}>
+                    <Link href={postLink} shallow scroll>
                       <a className="primary-button">
                         Read More{" "}
                         <span className="animated-caret">

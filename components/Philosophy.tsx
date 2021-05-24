@@ -43,13 +43,9 @@ export const Philosophy = () => {
       </div>
       <Container className="philosophy__container">
         <Row>
-          {tiles.map((tile) => {
+          {tiles.map((tile, index) => {
             return (
-              <Col
-                lg={4}
-                className="mb-4 px-lg-4"
-                key={tile.title.split(" ").join("-")}
-              >
+              <Col lg={4} className="mb-4 px-lg-4" key={index}>
                 <Tile
                   img={tile.img}
                   title={tile.title}

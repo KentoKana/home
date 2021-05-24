@@ -1,5 +1,8 @@
 .primary-header {
   height: $header-height;
+  @media screen and (max-width: 992px) {
+    height: 70px;
+  }
   font-size: 1.5em;
   ul {
     padding: 0;
