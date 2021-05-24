@@ -1,5 +1,6 @@
 import {
   faCode,
+  faHeart,
   faPencilRuler,
   faStickyNote,
   faToolbox,
@@ -20,6 +21,8 @@ export const CategoryIcon = ({ category }: ICategoryIcon) => {
       return <FontAwesomeIcon icon={faPencilRuler} />;
     case EBlogCategories.Miscellaneous:
       return <FontAwesomeIcon icon={faToolbox} />;
+    case EBlogCategories.Updates:
+      return <FontAwesomeIcon icon={faHeart} />;
     default:
       return <FontAwesomeIcon icon={faStickyNote} />;
   }
