@@ -17,6 +17,28 @@
       padding: 0;
       margin: 0;
       .menu-items {
+        &__close-mobile-menu-bg-button {
+          position: fixed;
+          top: 0;
+          left: 0;
+          color: transparent;
+          height: 100%;
+          width: 100%;
+          background-color: transparent;
+          border: none;
+        }
+        &--mobile {
+          transition: 0.2s ease all;
+          z-index: 2;
+          font-size: 0.9em;
+          background-color: #fff;
+          border-radius: 0.25em;
+          position: absolute;
+          right: 0%;
+          padding: 15px 35px;
+          box-shadow: $primary-box-shadow;
+          animation: fade-in 0.2s;
+        }
         li {
           font-size: 1em;
           a {
@@ -28,5 +50,14 @@
         }
       }
     }
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: #fff;
   }
 }

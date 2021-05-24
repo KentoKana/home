@@ -1,10 +1,13 @@
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
-import { Container } from "reactstrap";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
+import { Button, Container } from "reactstrap";
 
 export const Header = (): JSX.Element => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
+
   return (
     <>
       <header className="primary-header d-flex align-items-center">
@@ -28,15 +31,65 @@ export const Header = (): JSX.Element => {
                 </a>
               </Link>
             </li>
-            <li>
+            <li className="d-block d-md-none m-2 position-relative">
+              {/* Mobile Menu */}
+              <Link href="#">
+                <a onClick={() => setMobileMenuOpen((prev) => !prev)}>
+                  <FontAwesomeIcon icon={faBars} />
+                </a>
+              </Link>
+              {mobileMenuOpen && (
+                <>
+                  <ul className="menu-items--mobile">
+                    <li className="mb-3">
+                      <Link href={"/"} shallow>
+                        <a>Home</a>
+                      </Link>
+                    </li>
+                    <li className="mb-3">
+                      <Link href={"/about"} shallow>
+                        <a>About</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <ul className="d-flex justify-content-between">
+                        <li className="">
+                          <a
+                            href="https://www.linkedin.com/in/kentokana/ "
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <FontAwesomeIcon icon={faLinkedin} />
+                          </a>
+                        </li>
+                        <li className="">
+                          <a
+                            href="https://github.com/kentokana/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <FontAwesomeIcon icon={faGithub} />
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <Button
+                    className="menu-items__close-mobile-menu-bg-button"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Close
+                  </Button>
+                </>
+              )}
+            </li>
+            <li className="d-md-block d-none">
               <ul className="d-flex menu-items">
-                <li>
+                <li className="mx-4">
                   <ul className="">
                     <li className="mx-2">
                       <Link href={"/about"} shallow>
-                        <a>
-                          <FontAwesomeIcon icon={faUser} />
-                        </a>
+                        <a>About</a>
                       </Link>
                     </li>
                   </ul>
