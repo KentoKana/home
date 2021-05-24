@@ -70,7 +70,13 @@ export const Blog = ({ blogPosts }: IBlogProps) => {
                       </div>
                     </a>
                   </Link>
-                  <p>{post.excerpt.stripHTMLTag()}</p>
+                  <p>
+                    <span
+                      dangerouslySetInnerHTML={{
+                        __html: post.excerpt.stripHTMLTag(),
+                      }}
+                    ></span>
+                  </p>
                   <div className="d-flex justify-content-end">
                     <Link href={postLink} shallow scroll>
                       <a className="primary-button">
