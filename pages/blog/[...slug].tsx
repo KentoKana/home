@@ -8,6 +8,9 @@ import { Heading } from "../../components/Heading";
 import { DateDisplay } from "../../components/DateDisplay";
 import { EBlogCategories } from "../../enums/BlogCategories";
 import { useRouterScroll } from "@moxy/next-router-scroll";
+import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 
 interface IPost {
   id: number;
@@ -73,6 +76,16 @@ function Post({ post }: IPostProps) {
             />
           </div>
           <div dangerouslySetInnerHTML={{ __html: post.content }} />
+          <div className="my-4 d-flex justify-content-end">
+            <Link href={"/"} shallow scroll>
+              <a className="primary-button">
+                Back to Home{" "}
+                <span className="animated-caret">
+                  <FontAwesomeIcon icon={faCaretRight} />
+                </span>
+              </a>
+            </Link>
+          </div>
         </Container>
       </BaseSection>
     </>
