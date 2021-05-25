@@ -43,12 +43,12 @@ export const Header = (): JSX.Element => {
                   <ul className="menu-items--mobile text-center">
                     <li className="mb-3">
                       <Link href={"/"} shallow>
-                        <a>Home</a>
+                        <a onClick={() => setMobileMenuOpen(false)}>Home</a>
                       </Link>
                     </li>
                     <li className="mb-3">
                       <Link href={"/about"} shallow>
-                        <a>About</a>
+                        <a onClick={() => setMobileMenuOpen(false)}>About</a>
                       </Link>
                     </li>
                     <li>
