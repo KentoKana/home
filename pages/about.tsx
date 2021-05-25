@@ -71,7 +71,7 @@ function About() {
                   managing employee performance metrics.
                 </p>
                 <p>
-                  My specialty lies within the fields of UI/UX designs and
+                  My specialties lie within the fields of UI/UX designs and
                   front-end development. I believe in a minimalist and additive
                   approach to web designs - start with the bare minimum viable
                   product, then add UI enhancements without distracting the
