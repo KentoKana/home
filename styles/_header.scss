@@ -3,6 +3,7 @@
   @media screen and (max-width: 992px) {
     height: 70px;
   }
+  font-family: $primary-heading-font;
   font-size: 1.5em;
   ul {
     padding: 0;
@@ -28,6 +29,7 @@
           border: none;
         }
         &--mobile {
+          min-width: 200px;
           transition: 0.2s ease all;
           z-index: 2;
           font-size: 0.9em;

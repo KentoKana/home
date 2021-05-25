@@ -40,7 +40,7 @@ export const Header = (): JSX.Element => {
               </Link>
               {mobileMenuOpen && (
                 <>
-                  <ul className="menu-items--mobile">
+                  <ul className="menu-items--mobile text-center">
                     <li className="mb-3">
                       <Link href={"/"} shallow>
                         <a>Home</a>
@@ -52,8 +52,8 @@ export const Header = (): JSX.Element => {
                       </Link>
                     </li>
                     <li>
-                      <ul className="d-flex justify-content-between">
-                        <li className="">
+                      <ul className="d-flex justify-content-center">
+                        <li className="mx-2">
                           <a
                             href="https://www.linkedin.com/in/kentokana/ "
                             target="_blank"
@@ -62,7 +62,7 @@ export const Header = (): JSX.Element => {
                             <FontAwesomeIcon icon={faLinkedin} />
                           </a>
                         </li>
-                        <li className="">
+                        <li className="mx-2">
                           <a
                             href="https://github.com/kentokana/"
                             target="_blank"
@@ -86,7 +86,12 @@ export const Header = (): JSX.Element => {
             <li className="d-md-block d-none">
               <ul className="d-flex menu-items">
                 <li className="mx-4">
-                  <ul className="">
+                  <ul className="d-flex">
+                    <li className="mx-2">
+                      <Link href={"/"} shallow>
+                        <a>Home</a>
+                      </Link>
+                    </li>
                     <li className="mx-2">
                       <Link href={"/about"} shallow>
                         <a>About</a>
