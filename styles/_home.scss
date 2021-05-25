@@ -1,8 +1,8 @@
 .home {
+  animation-name: "fade-in";
+  animation-duration: 0.4s;
   .hero {
     transition: 0.4s ease all;
-    animation-name: "fade-in";
-    animation-duration: 0.4s;
     min-height: 700px;
     // height: calc(100vh - 60px);
     @media screen and (max-width: 992px) {
@@ -109,16 +109,5 @@
       font-size: 1.5em;
       max-width: 700px;
     }
-  }
-}
-
-@keyframes fade-in {
-  0% {
-    margin-left: -100px;
-    opacity: 0;
-  }
-  100% {
-    margin-left: 0;
-    opacity: 100%;
   }
 }

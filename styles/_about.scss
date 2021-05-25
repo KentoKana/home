@@ -1,4 +1,6 @@
 .about {
+  animation-name: "fade-in";
+  animation-duration: 0.4s;
   &__header {
     &-container {
       height: 300px;

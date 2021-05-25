@@ -49,3 +49,14 @@ a {
 @import "./home";
 @import "./blog-item";
 @import "./about";
+
+@keyframes fade-in {
+  0% {
+    margin-left: -100px;
+    opacity: 0;
+  }
+  100% {
+    margin-left: 0;
+    opacity: 100%;
+  }
+}

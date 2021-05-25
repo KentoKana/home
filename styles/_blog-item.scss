@@ -1,5 +1,7 @@
 $max-width: 800px;
 .blog-item {
+  animation-name: "fade-in";
+  animation-duration: 0.4s;
   h3 {
     margin-bottom: 1em;
   }
