@@ -35,7 +35,7 @@ function Post({ post }: IPostProps) {
   return (
     <>
       <Head>
-        <title>{post.title}</title>
+        <title>Kento Kanazawa | Blog | {post.title}</title>
         <meta title="description" content={post.excerpt.stripHTMLTag()} />
       </Head>
       <BaseSection sectionClassName="blog-item">

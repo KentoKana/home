@@ -17,8 +17,15 @@ function About() {
   return (
     <>
       <Head>
-        <title></title>
-        <meta title="description" content="" />
+        <title>Kento Kanazawa | About</title>
+        <meta
+          name="Keywords"
+          content="Kento Kanazawa, about web developer designer UX UI product software app digital design creative portfolio Victoria BC Canada"
+        ></meta>
+        <meta
+          title="description"
+          content="About Kento Kanazawa, a web developer based in Victoria BC"
+        />
       </Head>
       <BaseSection sectionClassName="about">
         <div className="about__header-container d-flex align-items-center">
