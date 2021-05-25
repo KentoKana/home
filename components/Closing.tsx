@@ -16,11 +16,9 @@ export const Closing = () => {
             className="mb-5"
           />
           <p className="closing__remarks">
-            Need a landing page? An e-commerce site? I'm open to working on any
-            intersting projects. Feel free to contact me at{" "}
-            <a href="mailto:kento@kentokanazawa.com">
-              kento[at]kentokanazawa.com
-            </a>
+            Need a landing page? An e-commerce site? I'm open to work on
+            anything interesting. Feel free to contact me at{" "}
+            <a href="mailto:kento@kentokanazawa.com">kento@kentokanazawa.com</a>
           </p>
         </div>
       </Container>
