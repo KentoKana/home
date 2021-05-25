@@ -31,6 +31,18 @@ function Post({ post }: IPostProps) {
 
   useEffect(() => {
     updateScroll();
+
+    // Wrap iframe in video-responsive div
+    // let frms = document.getElementsByClassName("wp-block-embed"),
+    //   post = document.getElementById("blog-item__content"),
+    //   div;
+    // if (frms || frms.length !== 0) {
+    //   for (let i = 0; i < frms.length; i++) {
+    //     div = post.appendChild(document.createElement("div"));
+    //     div.className = "video-responsive";
+    //     div.appendChild(frms[i]); // *
+    //   }
+    // }
   }, []);
   return (
     <>
@@ -68,14 +80,19 @@ function Post({ post }: IPostProps) {
           </Container>
         </div>
         <Container className="blog-item__container my-5">
-          <div className="blog-item__feature-image-container d-flex justify-content-center align-items-center mb-5">
-            <img
-              className="blog-item__feature-image"
-              src={post.featuredImage[0].link}
-              alt={post.featuredImage[0].alt_text}
-            />
-          </div>
-          <div dangerouslySetInnerHTML={{ __html: post.content }} />
+          {post.featuredImage && post.featuredImage[0] && (
+            <div className="blog-item__feature-image-container d-flex justify-content-center align-items-center mb-5">
+              <img
+                className="blog-item__feature-image"
+                src={post.featuredImage[0].link}
+                alt={post.featuredImage[0].alt_text}
+              />
+            </div>
+          )}
+          <div
+            id="blog-item__content"
+            dangerouslySetInnerHTML={{ __html: post.content }}
+          />
           <div className="my-4 d-flex justify-content-end">
             <Link href={"/"} shallow scroll>
               <a className="primary-button">

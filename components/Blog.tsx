@@ -59,17 +59,19 @@ export const Blog = ({ blogPosts }: IBlogProps) => {
                       </div>
                     </div>
                   </div>
-                  <Link href={postLink} shallow scroll>
-                    <a>
-                      <div className="blog__blog-item-image-container mb-5 d-flex justify-content-center align-items-center">
-                        <img
-                          className="blog__blog-item-image"
-                          src={post.featuredImage[0].link}
-                          alt={post.featuredImage[0].alt_text}
-                        />
-                      </div>
-                    </a>
-                  </Link>
+                  {post.featuredImage && post.featuredImage[0] && (
+                    <Link href={postLink} shallow scroll>
+                      <a>
+                        <div className="blog__blog-item-image-container mb-5 d-flex justify-content-center align-items-center">
+                          <img
+                            className="blog__blog-item-image"
+                            src={post.featuredImage[0].link}
+                            alt={post.featuredImage[0].alt_text}
+                          />
+                        </div>
+                      </a>
+                    </Link>
+                  )}
                   <p>
                     <span
                       dangerouslySetInnerHTML={{

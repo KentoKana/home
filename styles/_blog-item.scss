@@ -1,5 +1,8 @@
 $max-width: 800px;
 .blog-item {
+  h3 {
+    margin-bottom: 1em;
+  }
   &__header {
     max-width: $max-width;
     &-container {
