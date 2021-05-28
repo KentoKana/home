@@ -51,6 +51,16 @@ export const Header = (): JSX.Element => {
                         <a onClick={() => setMobileMenuOpen(false)}>About</a>
                       </Link>
                     </li>
+                    <li className="mb-3">
+                      <a
+                        href="https://resume.kentokanazawa.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        Resume
+                      </a>
+                    </li>
                     <li>
                       <ul className="d-flex justify-content-center">
                         <li className="mx-2">
@@ -96,6 +106,16 @@ export const Header = (): JSX.Element => {
                       <Link href={"/about"} shallow>
                         <a>About</a>
                       </Link>
+                    </li>
+                    <li className="mx-3">
+                      <a
+                        href="https://resume.kentokanazawa.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        Resume
+                      </a>
                     </li>
                   </ul>
                 </li>
