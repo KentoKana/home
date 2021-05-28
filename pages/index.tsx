@@ -52,7 +52,7 @@ export default function Home({ blogPosts }: IHomeProps) {
 
 export const getStaticProps: GetStaticProps = async () => {
   const res = await fetch(
-    "http://blog.kentokanazawa.com/wp-json/wp/v2/posts?_embed"
+    "https://blog.kentokanazawa.com/wp-json/wp/v2/posts?_embed"
   );
   const posts: WP_REST_API_Posts = await res.json();
   if (!posts) {

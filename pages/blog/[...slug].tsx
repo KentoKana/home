@@ -31,18 +31,6 @@ function Post({ post }: IPostProps) {
 
   useEffect(() => {
     updateScroll();
-
-    // Wrap iframe in video-responsive div
-    // let frms = document.getElementsByClassName("wp-block-embed"),
-    //   post = document.getElementById("blog-item__content"),
-    //   div;
-    // if (frms || frms.length !== 0) {
-    //   for (let i = 0; i < frms.length; i++) {
-    //     div = post.appendChild(document.createElement("div"));
-    //     div.className = "video-responsive";
-    //     div.appendChild(frms[i]); // *
-    //   }
-    // }
   }, []);
   return (
     <>
@@ -112,7 +100,7 @@ function Post({ post }: IPostProps) {
 export default Post;
 export const getStaticPaths = async () => {
   const res = await fetch(
-    "http://blog.kentokanazawa.com/wp-json/wp/v2/posts?_embed"
+    "https://blog.kentokanazawa.com/wp-json/wp/v2/posts?_embed"
   );
   const posts: WP_REST_API_Posts = await res.json();
 
@@ -129,7 +117,7 @@ export const getStaticPaths = async () => {
 };
 export const getStaticProps: GetStaticProps = async (context) => {
   const res = await fetch(
-    `http://blog.kentokanazawa.com/wp-json/wp/v2/posts/${context.params.slug[1]}?_embed`
+    `https://blog.kentokanazawa.com/wp-json/wp/v2/posts/${context.params.slug[1]}?_embed`
   );
 
   const post: WP_REST_API_Post = await res.json();
