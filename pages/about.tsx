@@ -59,7 +59,7 @@ function About() {
                   beautiful British Columbia. After getting my bachelor's degree
                   in Psychology, I jumped into the world of web development to
                   pursue a career in building creative solutions for real world
-                  problems. I'm currently worked at{" "}
+                  problems. I'm currently working at{" "}
                   <a
                     href="http://lbcit.ca"
                     target="_blank"
