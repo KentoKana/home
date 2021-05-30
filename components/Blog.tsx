@@ -9,6 +9,7 @@ import { faStackOverflow } from "@fortawesome/free-brands-svg-icons";
 import { DateDisplay } from "./DateDisplay";
 import { faBookOpen } from "@fortawesome/free-solid-svg-icons";
 import { CategoryIcon } from "./CategoryIcon";
+import { ImageContainer } from "./ImageContainer";
 
 interface IBlogProps {
   blogPosts: IBlogPostProps[];
@@ -63,11 +64,15 @@ export const Blog = ({ blogPosts }: IBlogProps) => {
                     <Link href={postLink} shallow scroll>
                       <a>
                         <div className="blog__blog-item-image-container mb-5 d-flex justify-content-center align-items-center">
-                          <img
-                            className="blog__blog-item-image"
+                          <ImageContainer
                             src={post.featuredImage[0].link}
                             alt={post.featuredImage[0].alt_text}
                           />
+                          {/* <img
+                            className="blog__blog-item-image"
+                            src={post.featuredImage[0].link}
+                            alt={post.featuredImage[0].alt_text}
+                          /> */}
                         </div>
                       </a>
                     </Link>
