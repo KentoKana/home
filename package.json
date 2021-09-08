@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build && next export",
     "start": "next start",
-    "buildremote": "cp -r out/. ../public_html"
+    "build-remote": "next build && next export && cp -r out/. ../public_html"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
