@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
-    "start": "next start"
+    "start": "next start",
+    "buildremote": "cp out ../public_html"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
