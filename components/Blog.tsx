@@ -3,13 +3,12 @@ import { Col, Container, Row } from "reactstrap";
 import { BaseSection } from "./BaseSection";
 import { Heading } from "./Heading";
 import Link from "next/link";
-import { IBlogPostProps } from "../pages";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStackOverflow } from "@fortawesome/free-brands-svg-icons";
 import { DateDisplay } from "./DateDisplay";
 import { faBookOpen } from "@fortawesome/free-solid-svg-icons";
 import { CategoryIcon } from "./CategoryIcon";
 import { ImageContainer } from "./ImageContainer";
+import { IBlogPostProps } from "../pages/blog";
 
 interface IBlogProps {
   blogPosts: IBlogPostProps[];
