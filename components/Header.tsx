@@ -63,7 +63,7 @@ export const Header = (): JSX.Element => {
                     </li>
                     <li className="mx-2">
                       <Link href={"/blog"} shallow>
-                        <a>Blog</a>
+                        <a onClick={() => setMobileMenuOpen(false)}>Blog</a>
                       </Link>
                     </li>
                     <li>
@@ -104,12 +104,12 @@ export const Header = (): JSX.Element => {
                   <ul className="d-flex">
                     <li className="mx-2">
                       <Link href={"/"} shallow>
-                        <a>Home</a>
+                        <a onClick={() => setMobileMenuOpen(false)}>Home</a>
                       </Link>
                     </li>
                     <li className="mx-2">
                       <Link href={"/about"} shallow>
-                        <a>About</a>
+                        <a onClick={() => setMobileMenuOpen(false)}>About</a>
                       </Link>
                     </li>
                     <li className="mx-3">
@@ -124,7 +124,7 @@ export const Header = (): JSX.Element => {
                     </li>
                     <li className="mx-2">
                       <Link href={"/blog"} shallow>
-                        <a>Blog</a>
+                        <a onClick={() => setMobileMenuOpen(false)}>Blog</a>
                       </Link>
                     </li>
                   </ul>
@@ -134,6 +134,7 @@ export const Header = (): JSX.Element => {
                     href="https://www.linkedin.com/in/kentokana/ "
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => setMobileMenuOpen(false)}
                   >
                     <FontAwesomeIcon icon={faLinkedin} />
                   </a>
@@ -143,6 +144,7 @@ export const Header = (): JSX.Element => {
                     href="https://github.com/kentokana/"
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => setMobileMenuOpen(false)}
                   >
                     <FontAwesomeIcon icon={faGithub} />
                   </a>
