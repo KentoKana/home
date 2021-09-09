@@ -3,7 +3,7 @@
   @media screen and (max-width: 992px) {
     height: 70px;
   }
-  font-family: $secondary-heading-font;
+  font-family: $primary-heading-font;
   font-size: 1.3em;
   ul {
     padding: 0;
@@ -47,6 +47,9 @@
             transition: 0.4s ease all;
             &:hover {
               color: $primary-color;
+              -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+              -webkit-text-stroke-width: 1px;
+              -webkit-text-stroke-color: #000;
             }
           }
         }

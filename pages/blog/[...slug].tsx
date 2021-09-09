@@ -40,7 +40,10 @@ function Post({ post }: IPostProps) {
       </Head>
       <BaseSection sectionClassName="blog-item">
         <div className="blog-item__header-container d-flex align-items-center">
-          <Container className="blog-item__header">
+          <Container
+            className="blog-item__header"
+            style={{ paddingTop: 30, paddingBottom: 30 }}
+          >
             <div>
               <Heading
                 headingLabel={post.title}
@@ -82,9 +85,9 @@ function Post({ post }: IPostProps) {
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
           <div className="my-4 d-flex justify-content-end">
-            <Link href={"/"} shallow scroll>
+            <Link href={"/blog"} shallow scroll>
               <a className="primary-button">
-                Back to Home{" "}
+                Back{" "}
                 <span className="animated-caret">
                   <FontAwesomeIcon icon={faCaretRight} />
                 </span>

@@ -61,6 +61,11 @@ export const Header = (): JSX.Element => {
                         Resume
                       </a>
                     </li>
+                    <li className="mx-2">
+                      <Link href={"/blog"} shallow>
+                        <a>Blog</a>
+                      </Link>
+                    </li>
                     <li>
                       <ul className="d-flex justify-content-center">
                         <li className="mx-2">
@@ -116,6 +121,11 @@ export const Header = (): JSX.Element => {
                       >
                         Resume
                       </a>
+                    </li>
+                    <li className="mx-2">
+                      <Link href={"/blog"} shallow>
+                        <a>Blog</a>
+                      </Link>
                     </li>
                   </ul>
                 </li>

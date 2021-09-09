@@ -12,15 +12,26 @@ import { RouterScrollProvider } from "@moxy/next-router-scroll";
 // You should do that in a Layout file or in `gatsby-browser.js`.
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
+import { useEffect, useState } from "react";
 
 function MyApp({ Component, pageProps }) {
+  const [loadPage, setLoadPage] = useState<boolean>(false);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoadPage(true);
+    }, 600);
+  }, []);
   return (
     <>
-      <RouterScrollProvider>
-        <Header />
-        <Component {...pageProps} />
-        <Footer />
-      </RouterScrollProvider>
+      {loadPage ? (
+        <RouterScrollProvider>
+          <Header />
+          <Component {...pageProps} />
+          <Footer />
+        </RouterScrollProvider>
+      ) : (
+        <></>
+      )}
     </>
   );
 }

@@ -7,6 +7,7 @@ import { Heading } from "../components/Heading";
 import { Philosophy } from "../components/Philosophy";
 import { useRouterScroll } from "@moxy/next-router-scroll";
 import { ImageContainer } from "../components/ImageContainer";
+import { Closing } from "../components/Closing";
 
 function About() {
   const { updateScroll } = useRouterScroll();
@@ -95,6 +96,7 @@ function About() {
         </div>
       </BaseSection>
       <Philosophy />
+      <Closing />
     </>
   );
 }
