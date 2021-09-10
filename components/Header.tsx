@@ -14,7 +14,7 @@ export const Header = (): JSX.Element => {
         <Container>
           <ul className="d-flex justify-content-between primary-menu align-items-center">
             <li>
-              <Link href={"/"} shallow>
+              <Link href={"/"}>
                 <a>
                   <img
                     className="d-none d-lg-block"
@@ -42,12 +42,12 @@ export const Header = (): JSX.Element => {
                 <>
                   <ul className="menu-items--mobile text-center">
                     <li className="mb-3">
-                      <Link href={"/"} shallow>
+                      <Link href={"/"}>
                         <a onClick={() => setMobileMenuOpen(false)}>Home</a>
                       </Link>
                     </li>
                     <li className="mb-3">
-                      <Link href={"/about"} shallow>
+                      <Link href={"/about"}>
                         <a onClick={() => setMobileMenuOpen(false)}>About</a>
                       </Link>
                     </li>
@@ -62,7 +62,7 @@ export const Header = (): JSX.Element => {
                       </a>
                     </li>
                     <li className="mx-2">
-                      <Link href={"/blog"} shallow>
+                      <Link href={"/blog"}>
                         <a onClick={() => setMobileMenuOpen(false)}>Blog</a>
                       </Link>
                     </li>
@@ -103,12 +103,12 @@ export const Header = (): JSX.Element => {
                 <li className="mx-4">
                   <ul className="d-flex">
                     <li className="mx-2">
-                      <Link href={"/"} shallow>
+                      <Link href={"/"}>
                         <a onClick={() => setMobileMenuOpen(false)}>Home</a>
                       </Link>
                     </li>
                     <li className="mx-2">
-                      <Link href={"/about"} shallow>
+                      <Link href={"/about"}>
                         <a onClick={() => setMobileMenuOpen(false)}>About</a>
                       </Link>
                     </li>
@@ -123,7 +123,7 @@ export const Header = (): JSX.Element => {
                       </a>
                     </li>
                     <li className="mx-2">
-                      <Link href={"/blog"} shallow>
+                      <Link href={"/blog"}>
                         <a onClick={() => setMobileMenuOpen(false)}>Blog</a>
                       </Link>
                     </li>

@@ -1,4 +1,3 @@
-import React from "react";
 import { Col, Container, Row } from "reactstrap";
 import { BaseSection } from "./BaseSection";
 import { Heading } from "./Heading";
@@ -43,7 +42,7 @@ export const Blog = ({ blogPosts }: IBlogProps) => {
                   <div className="blog__blog-item-title-container mb-5 py-3 d-flex align-items-center justify-content-between">
                     <div>
                       <h3 className="mb-3 blog__blog-item-title">
-                        <Link href={postLink} shallow scroll>
+                        <Link href={postLink}>
                           <a>{post.title}</a>
                         </Link>
                       </h3>
@@ -60,7 +59,7 @@ export const Blog = ({ blogPosts }: IBlogProps) => {
                     </div>
                   </div>
                   {post.featuredImage && post.featuredImage[0] && (
-                    <Link href={postLink} shallow scroll>
+                    <Link href={postLink}>
                       <a>
                         <div className="blog__blog-item-image-container mb-5 d-flex justify-content-center align-items-center">
                           <ImageContainer
@@ -84,7 +83,7 @@ export const Blog = ({ blogPosts }: IBlogProps) => {
                     ></span>
                   </p>
                   <div className="d-flex justify-content-end">
-                    <Link href={postLink} shallow scroll>
+                    <Link href={postLink}>
                       <a className="primary-button">
                         Read More{" "}
                         <span className="animated-caret">

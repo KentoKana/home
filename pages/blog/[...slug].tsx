@@ -7,7 +7,6 @@ import { BaseSection } from "../../components/BaseSection";
 import { Heading } from "../../components/Heading";
 import { DateDisplay } from "../../components/DateDisplay";
 import { EBlogCategories } from "../../enums/BlogCategories";
-import { useRouterScroll } from "@moxy/next-router-scroll";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
@@ -27,11 +26,6 @@ interface IPostProps {
 }
 
 function Post({ post }: IPostProps) {
-  const { updateScroll } = useRouterScroll();
-
-  useEffect(() => {
-    updateScroll();
-  }, []);
   return (
     <>
       <Head>
@@ -85,7 +79,7 @@ function Post({ post }: IPostProps) {
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
           <div className="my-4 d-flex justify-content-end">
-            <Link href={"/blog"} shallow scroll>
+            <Link href={"/blog"}>
               <a className="primary-button">
                 Back{" "}
                 <span className="animated-caret">

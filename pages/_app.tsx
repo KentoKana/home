@@ -7,28 +7,34 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 import "../utils";
 config.autoAddCss = false; /* eslint-disable import/first */
 
-import { RouterScrollProvider } from "@moxy/next-router-scroll";
-
 // You should do that in a Layout file or in `gatsby-browser.js`.
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { useEffect, useState } from "react";
+import Router from "next/router";
 
 function MyApp({ Component, pageProps }) {
   const [loadPage, setLoadPage] = useState<boolean>(false);
+
   useEffect(() => {
+    Router.events.on("routeChangeComplete", () => {
+      console.log("COME ON YOU FUCKER");
+
+      window.scrollTo(0, 0);
+    });
     setTimeout(() => {
       setLoadPage(true);
-    }, 600);
+    }, 1300);
   }, []);
+
   return (
     <>
       {loadPage ? (
-        <RouterScrollProvider>
+        <>
           <Header />
           <Component {...pageProps} />
           <Footer />
-        </RouterScrollProvider>
+        </>
       ) : (
         <></>
       )}

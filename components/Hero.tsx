@@ -1,17 +1,9 @@
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "reactstrap";
 import { BaseSection } from "./BaseSection";
 
 export const Hero = () => {
-  const [imageLoaded, setImageLoaded] = useState<boolean>(false);
-  useEffect(() => {
-    if (imageLoaded) {
-      console.log("loaded");
-    }
-  }, [imageLoaded]);
-
   return (
     <BaseSection sectionClassName="hero d-flex align-items-center mb-4">
       <Container className="hero__container">
@@ -23,9 +15,6 @@ export const Hero = () => {
                 className="hero__image"
                 src="./images/profile.jpg"
                 alt="placeholder"
-                onLoad={() => {
-                  setImageLoaded(true);
-                }}
               />
             </div>
             <h1 className="heading--primary mb-4">
@@ -74,9 +63,6 @@ export const Hero = () => {
                 className="hero__image"
                 src="./images/profile.jpg"
                 alt="placeholder"
-                onLoad={() => {
-                  setImageLoaded(true);
-                }}
               />
             </div>
           </Col>

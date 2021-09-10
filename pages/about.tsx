@@ -1,20 +1,14 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Head from "next/head";
 
 import { Col, Container, Row } from "reactstrap";
 import { BaseSection } from "../components/BaseSection";
 import { Heading } from "../components/Heading";
 import { Philosophy } from "../components/Philosophy";
-import { useRouterScroll } from "@moxy/next-router-scroll";
 import { ImageContainer } from "../components/ImageContainer";
 import { Closing } from "../components/Closing";
 
 function About() {
-  const { updateScroll } = useRouterScroll();
-
-  useEffect(() => {
-    updateScroll();
-  }, []);
   return (
     <>
       <Head>

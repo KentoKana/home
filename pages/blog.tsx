@@ -1,8 +1,6 @@
 import { GetStaticProps } from "next";
 import { Blog as BlogComponent } from "../components/Blog";
 import type { WP_REST_API_Posts } from "wp-types";
-import React, { useEffect } from "react";
-import { useRouterScroll } from "@moxy/next-router-scroll";
 import Head from "next/head";
 
 export interface IBlogPostProps {
@@ -20,11 +18,6 @@ interface IHomeProps {
 }
 
 export default function Blog({ blogPosts }: IHomeProps) {
-  const { updateScroll } = useRouterScroll();
-
-  useEffect(() => {
-    updateScroll();
-  }, []);
   return (
     <>
       <Head>
