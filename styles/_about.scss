@@ -3,10 +3,10 @@
   animation-duration: 0.4s;
   &__header {
     &-container {
-      height: 300px;
+      height: 100px;
       background-color: $primary-color;
       @media screen and (max-width: 992px) {
-        height: 150px;
+        height: 100px;
       }
     }
   }

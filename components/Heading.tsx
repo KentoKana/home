@@ -21,10 +21,11 @@ export const Heading = ({
           size === "sm"
             ? "1em"
             : size === "md"
-            ? "2em"
+            ? "1.3em"
             : size === "lg"
-            ? "3em"
+            ? "2em"
             : "1em",
+        lineHeight: 1.4,
       }}
       className={`${className ?? ""} ${
         "heading--" + headingType

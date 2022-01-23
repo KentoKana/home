@@ -17,17 +17,17 @@ export const Header = (): JSX.Element => {
               <Link href={"/"}>
                 <a>
                   <img
-                    className="d-none d-lg-block"
+                    className=""
                     src={"/images/logo.png"}
                     alt={"Kento Kanazawa logo"}
-                    style={{ height: 100 }}
+                    style={{ maxHeight: 70 }}
                   />
-                  <img
+                  {/* <img
                     className="d-lg-none d-block"
                     src={"/images/logo_small.png"}
                     alt={"Kento Kanazawa logo"}
                     style={{ height: 70 }}
-                  />
+                  /> */}
                 </a>
               </Link>
             </li>
@@ -51,6 +51,11 @@ export const Header = (): JSX.Element => {
                         <a onClick={() => setMobileMenuOpen(false)}>About</a>
                       </Link>
                     </li>
+                    <li className=" mb-3">
+                      <Link href={"/blog"}>
+                        <a onClick={() => setMobileMenuOpen(false)}>Blog</a>
+                      </Link>
+                    </li>
                     <li className="mb-3">
                       <a
                         href="https://resume.kentokanazawa.com/"
@@ -60,11 +65,6 @@ export const Header = (): JSX.Element => {
                       >
                         Resume
                       </a>
-                    </li>
-                    <li className="mx-2">
-                      <Link href={"/blog"}>
-                        <a onClick={() => setMobileMenuOpen(false)}>Blog</a>
-                      </Link>
                     </li>
                     <li>
                       <ul className="d-flex justify-content-center">
@@ -112,6 +112,11 @@ export const Header = (): JSX.Element => {
                         <a onClick={() => setMobileMenuOpen(false)}>About</a>
                       </Link>
                     </li>
+                    <li className="mx-2">
+                      <Link href={"/blog"}>
+                        <a onClick={() => setMobileMenuOpen(false)}>Blog</a>
+                      </Link>
+                    </li>
                     <li className="mx-3">
                       <a
                         href="https://resume.kentokanazawa.com/"
@@ -121,11 +126,6 @@ export const Header = (): JSX.Element => {
                       >
                         Resume
                       </a>
-                    </li>
-                    <li className="mx-2">
-                      <Link href={"/blog"}>
-                        <a onClick={() => setMobileMenuOpen(false)}>Blog</a>
-                      </Link>
                     </li>
                   </ul>
                 </li>

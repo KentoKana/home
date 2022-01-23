@@ -41,7 +41,7 @@ function About() {
               <Col lg={5}>
                 <Heading
                   headingLabel={
-                    "Developer by profession, a general hobbyist at heart."
+                    "Developer by profession, a hobbyist at heart."
                   }
                   headingType="primary"
                   color="primary"
@@ -69,12 +69,11 @@ function About() {
                   front-end development. I believe in a minimalist and additive
                   approach to web designs - start with the bare minimum viable
                   product, then add UI enhancements without distracting the
-                  audience from the core purpose.
+                  audience from the core purpose of the website/applicaiton.
                 </p>
                 <p>
                   Outside of development, I enjoy losing friendship over a game
-                  of Mario Kart, cooking up a storm in his kitchen, and mucking
-                  about on my guitar.
+                  of Mario Party, cooking up a storm in his kitchen, and noodling on my guitar.
                 </p>
               </Col>
               <Col lg={7}>
