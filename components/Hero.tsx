@@ -21,8 +21,16 @@ export const Hero = () => {
               I'm Kento, A Web Developer.
             </h1>
             <p className="hero__blurb heading--secondary mb-4">
-              I'm a developer with a keen eye for designing intuitive and
-              engaging user interfaces to bring life into your digital product.
+              I'm a developer{" "}
+              <a
+                href="http://lbcit.ca"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                @LBC IT Solutions
+              </a>{" "}
+              with a keen eye for designing intuitive and engaging user
+              interfaces to bring life into your digital product.
             </p>
             <a href="mailto:kento@kentokanazawa.com" className="primary-button">
               Get In Touch{" "}

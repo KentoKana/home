@@ -1,5 +1,4 @@
 import React from "react";
-import Head from "next/head";
 
 import { Col, Container, Row } from "reactstrap";
 import { BaseSection } from "../components/BaseSection";
@@ -10,17 +9,6 @@ import { Closing } from "../components/Closing";
 function About() {
   return (
     <>
-      <Head>
-        <title>Kento Kanazawa | About</title>
-        <meta
-          name="Keywords"
-          content="Kento Kanazawa, about web developer designer UX UI product software app digital design creative portfolio Victoria BC Canada"
-        ></meta>
-        <meta
-          title="description"
-          content="About Kento Kanazawa, a web developer based in Victoria BC"
-        />
-      </Head>
       <BaseSection sectionClassName="about">
         <div className="about__header-container d-flex align-items-center">
           <Container className="about__header">
@@ -40,18 +28,16 @@ function About() {
             <Row>
               <Col lg={5}>
                 <Heading
-                  headingLabel={
-                    "Developer by profession, a hobbyist at heart."
-                  }
+                  headingLabel={"Developer by profession, hobbyist at heart."}
                   headingType="primary"
                   color="primary"
                   size="lg"
                   className="text-dark mb-5"
                 />
                 <p>
-                  Hello there! I'm Kento, and I am a web developer based in the
-                  beautiful British Columbia. After getting my bachelor's degree
-                  in Psychology, I jumped into the world of web development to
+                  I'm Kento, and I am a web developer based in the beautiful
+                  British Columbia. After getting my bachelor's degree in
+                  Psychology, I jumped into the world of web development to
                   pursue a career in building creative solutions for real world
                   problems. I'm currently working at{" "}
                   <a
@@ -65,15 +51,17 @@ function About() {
                   managing employee performance metrics.
                 </p>
                 <p>
-                  My specialties lie within the fields of UI/UX designs and
-                  front-end development. I believe in a minimalist and additive
-                  approach to web designs - start with the bare minimum viable
-                  product, then add UI enhancements without distracting the
-                  audience from the core purpose of the website/applicaiton.
+                  With my Psychology background, my specialties lie within the
+                  fields of UI/UX designs and front-end development. I believe
+                  in a minimalist and additive approach to web designs - start
+                  with the bare minimum viable product, then add UI enhancements
+                  without distracting the audience from the core purpose of the
+                  website/applicaiton.
                 </p>
                 <p>
                   Outside of development, I enjoy losing friendship over a game
-                  of Mario Party, cooking up a storm in his kitchen, and noodling on my guitar.
+                  of Mario Party, cooking up a storm in his kitchen, and
+                  noodling on my guitar.
                 </p>
               </Col>
               <Col lg={7}>

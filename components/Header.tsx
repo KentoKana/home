@@ -46,11 +46,6 @@ export const Header = (): JSX.Element => {
                         <a onClick={() => setMobileMenuOpen(false)}>Home</a>
                       </Link>
                     </li>
-                    <li className="mb-3">
-                      <Link href={"/about"}>
-                        <a onClick={() => setMobileMenuOpen(false)}>About</a>
-                      </Link>
-                    </li>
                     <li className=" mb-3">
                       <Link href={"/blog"}>
                         <a onClick={() => setMobileMenuOpen(false)}>Blog</a>
@@ -105,11 +100,6 @@ export const Header = (): JSX.Element => {
                     <li className="mx-2">
                       <Link href={"/"}>
                         <a onClick={() => setMobileMenuOpen(false)}>Home</a>
-                      </Link>
-                    </li>
-                    <li className="mx-2">
-                      <Link href={"/about"}>
-                        <a onClick={() => setMobileMenuOpen(false)}>About</a>
                       </Link>
                     </li>
                     <li className="mx-2">

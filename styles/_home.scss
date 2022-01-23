@@ -6,13 +6,15 @@
     min-height: calc(100vh - 200px);
     // height: calc(100vh - 60px);
     @media screen and (max-width: 992px) {
-      min-height: 100vh;
       text-align: center;
     }
     h1 {
       font-size: 3.5em;
       color: $primary-color;
       text-transform: uppercase;
+      @media screen and (max-width: 992px) {
+        font-size: 2em;
+      }
     }
     .container,
     .row {
@@ -30,17 +32,23 @@
       &-container {
         overflow: hidden;
         @media screen and (max-width: 992px) {
-          height: initial;
+          width: 100%;
+          justify-content: center;
+          align-items: center;
+          display: flex;
         }
       }
       object-fit: cover;
       font-size: 1.5em;
       border-radius: 0.25em;
       height: 400px;
-      // max-height: 50vh;
       width: 100%;
       max-width: 800px;
-      // box-shadow: $primary-box-shadow;
+      @media screen and (max-width: 992px) {
+        border-radius: 400px;
+        width: 200px;
+        height: 200px;
+      }
     }
   }
 }
