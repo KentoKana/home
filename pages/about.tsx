@@ -4,7 +4,6 @@ import Head from "next/head";
 import { Col, Container, Row } from "reactstrap";
 import { BaseSection } from "../components/BaseSection";
 import { Heading } from "../components/Heading";
-import { Philosophy } from "../components/Philosophy";
 import { ImageContainer } from "../components/ImageContainer";
 import { Closing } from "../components/Closing";
 
@@ -89,7 +88,6 @@ function About() {
           </Container>
         </div>
       </BaseSection>
-      <Philosophy />
       <Closing />
     </>
   );

@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import Head from "next/head";
 import { GetStaticProps } from "next";
 import { WP_REST_API_Post, WP_REST_API_Posts } from "wp-types";

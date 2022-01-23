@@ -17,6 +17,9 @@ function MyApp({ Component, pageProps }) {
   const [loadPage, setLoadPage] = useState<boolean>(false);
 
   useEffect(() => {
+    if (navigator.userAgent.indexOf("Firefox") === -1) {
+      document.querySelector("html").style.scrollBehavior = "smooth";
+    }
     Router.events.on("routeChangeComplete", () => {
       console.log("COME ON YOU FUCKER");
 
